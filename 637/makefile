@@ -23,6 +23,9 @@ D: d.cpp
 E: e.cpp
 	$(CXX) $(CCFLAGS) e.cpp -o $@
 
+F: e.cpp
+	$(CXX) $(CCFLAGS) f.cpp -o $@
+
 
 clean:
-	rm -f A B C D E
+	rm -f A B C D E F
