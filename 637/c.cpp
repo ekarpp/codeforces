@@ -3,18 +3,46 @@
 #include <algorithm>
 
 //using namespace std;
-typedef long long ll;
+typedef int ll;
 
 void solve() {
     int n;
     std::cin >> n;
-    std::vector<ll> vec(n);
 
+
+
+
+    std::vector<ll> vec(n);
     for (int i = 0; i < n; i++)
         std::cin >> vec[i];
 
-    for (int i = 0; i < n; i++)
-        std::cout << vec[i];
+    if (n == 1)
+    {
+        std::cout << "Yes" << '\n';
+        return;
+    }
+
+    int idx = 1;
+    while (idx <= n)
+    {
+        int pos = 0;
+        while (vec[pos] != idx)
+            pos++;
+        while (pos < n && idx <= n && vec[pos] >= idx)
+        {
+            if (vec[pos] != idx)
+            {
+                std::cout << "No" << '\n';
+                return;
+            }
+            pos++;
+            idx++;
+        }
+    }
+
+
+    std::cout << "Yes" << '\n';
+
 }
 
 
