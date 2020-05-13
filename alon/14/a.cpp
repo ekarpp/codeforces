@@ -5,21 +5,16 @@
 //using namespace std;
 typedef long long ll;
 
-
-const int mask = 0xFFFFF;
-
 void solve() {
     int n;
     std::cin >> n;
+    std::vector<ll> vec(n);
 
-    ll l = 1;
-    ll r = n*n;
+    for (int i = 0; i < n; i++)
+        std::cin >> vec[i];
 
-    while (l < r)
-    {
-        ll mid = (l + r) / 2;
-        ll lt = mid / n;
-    }
+    for (int i = 0; i < n; i++)
+        std::cout << vec[i];
 }
 
 
@@ -27,7 +22,8 @@ int main() {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(0);
 
-    int t = 1;
+    int t;
+    std::cin >> t;
     while (t--)
         solve();
 
