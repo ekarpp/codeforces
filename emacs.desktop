@@ -1,0 +1,91 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed May 13 09:49:30 2020
+;; Desktop file format version 208
+;; Emacs version 26.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24251 39034 501893 355000) (desktop . "208") "qqqqq@ppppp" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "wheat") (background-color . "black") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "thistle") (sticky) (environment) (frameset--id . "A495-4183-67FC-5E44") (frameset--mini t . t) (frameset--text-pixel-width . 1564) (frameset--text-pixel-height . 861) (height . 47) (width . 173) (modeline . t) (unsplittable) (left . 0) (top . 37) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 22) (min-height-ignore . 2) (min-width-ignore . 21) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 72) (min-pixel-width . 198) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 189) (min-pixel-height-safe . 18) (min-pixel-width-safe . 36)) hc (pixel-width . 1596) (pixel-height . 843) (total-width . 177) (total-height . 46) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 795) (pixel-height . 843) (total-width . 88) (total-height . 46) (normal-height . 1.0) (normal-width . 0.5) (buffer "a.cpp<4>" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 5) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (leaf (last . t) (pixel-width . 801) (pixel-height . 843) (total-width . 89) (total-height . 46) (normal-height . 1.0) (normal-width . 0.5) (buffer "*eshell*" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 8) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 849769) (start . 849767)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/home/qqqqq/codeforce" "/home/qqqqq/codeforce/alon/4/a.cpp" "/home/qqqqq/codeforce/alon/3/d.cpp" "/home/qqqqq/codeforce/alon/3/c.cpp" "/home/qqqqq/codeforce/alon/3/b.cpp" "/home/qqqqq/codeforce/alon/3/a.cpp" "/home/qqqqq/codeforce/alon/2/d.cpp"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/qqqqq/codeforce/alon/4/a.cpp"
+  "a.cpp"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode override-global-mode linum-mode ivy-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 24251 39032 276349 952000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/qqqqq/codeforce/alon/3/d.cpp"
+  "d.cpp"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode override-global-mode linum-mode ivy-mode)
+  1094
+  '(939 nil)
+  nil
+  nil
+  '((buffer-display-time 24251 38974 212485 878000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (919 1053 938 784 873 938 873 1053 854 854 817 784 1096 595 489 164))))
+
+(desktop-create-buffer 208
+  "/home/qqqqq/codeforce/alon/3/c.cpp"
+  "c.cpp"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode override-global-mode linum-mode ivy-mode)
+  536
+  '(113 nil)
+  nil
+  nil
+  '((buffer-display-time 24250 50704 255770 591000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (113 113 594 326 536 554 595 748 286 268 505 442 60 554 619 433))))
+
+(desktop-create-buffer 208
+  "/home/qqqqq/codeforce/alon/3/b.cpp"
+  "b.cpp"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode override-global-mode linum-mode ivy-mode)
+  643
+  '(424 nil)
+  nil
+  nil
+  '((buffer-display-time 24250 19508 169895 488000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (424 218 790 129 211 251 60 251 424 424 251 424 424 424 424 642))))
+
+(desktop-create-buffer 208
+  "/home/qqqqq/codeforce/alon/3/a.cpp"
+  "a.cpp"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode override-global-mode linum-mode ivy-mode)
+  476
+  '(196 nil)
+  nil
+  nil
+  '((buffer-display-time 24250 17994 100189 298000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (501 643 338 338 60 338 177 231 321 395 76 304 464 356 192 388))))
+
+(desktop-create-buffer 208
+  "/home/qqqqq/codeforce/alon/2/d.cpp"
+  "d.cpp"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode override-global-mode linum-mode ivy-mode)
+  1025
+  '(1026 nil)
+  nil
+  nil
+  '((buffer-display-time 24250 17247 295227 515000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (1026 495 495 1026 495 494 136 179 495 495 298 268 370 495 998 447))))
+

@@ -50,6 +50,7 @@ void solve() {
         cin >> vec[i];
     sort(vec.begin(), vec.end());
 
+
 }
 
 int main() {

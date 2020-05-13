@@ -8,13 +8,22 @@ typedef long long ll;
 void solve() {
     int n;
     std::cin >> n;
-    std::vector<ll> vec(n);
 
-    for (int i = 0; i < n; i++)
-        std::cin >> vec[i];
+    int sum = 0;
+    while (n >= 2)
+    {
+        int h = 1;
+        while (2 + 2*(h - 1) + 3 * ((h * (h - 1)) / 2) <= n)
+            h++;
 
-    for (int i = 0; i < n; i++)
-        std::cout << vec[i];
+        h--;
+
+        sum++;
+        n -= 2 + 2*(h - 1) + 3 * (h * (h - 1))/2;
+//        std::cout << h << " " << n << "\n";
+//n -= 2*h + (h*h + h) / 2 - 1;
+    }
+    std::cout << sum << "\n";
 }
 
 

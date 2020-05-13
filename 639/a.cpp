@@ -5,15 +5,17 @@
 typedef long long ll;
 
 void solve() {
-    int n;
+    int n, m;
     std::cin >> n;
-    std::vector<ll> vec(n);
+    std::cin >> m;
 
-    for (int i = 0; i < n; i++)
-        std::cin >> vec[i];
+    if (n == 1 || m == 1)
+        std::cout << "YES" << "\n";
+    else if (n == 2 && m == 2)
+        std::cout << "YES" << "\n";
+    else
+        std::cout << "NO" << "\n";
 
-    for (int i = 0; i < n; i++)
-        std::cout << vec[i];
 }
 
 
