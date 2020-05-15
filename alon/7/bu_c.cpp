@@ -34,35 +34,11 @@ void solve() {
         int p = idx;
         int rmd = 0;
         int addd = 0;
-        int nww = -1;
-        while (nww != p)
-        {
-            p = nww;
-            //addd += tree[p];
-            //while (tree[p])
-            //p += tree[p];
-            if (p % 2 == 0)
-                p--;
+        while (tree[p])
+        {addd += tree[p]; p += tree[p];}
 
-            if (p >= size)
-            {
-                int xx = 0;
-                if (p > size + size / 2)
-                    xx = tree[1];
-
-                while (p & (p - 1))
-                {
-                    if (p % 2 == 0)
-                        p--;
-                    p /= 2;
-                }
-
-                nww = idx + tree[p] + xx - addd;
-                addd = tree[p] + xx;
-
-            }
-        }
-
+        if (p % 2 == 0)
+            p--;
 
         if (p >= size)
         {
