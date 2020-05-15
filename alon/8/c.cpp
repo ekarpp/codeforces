@@ -48,6 +48,7 @@ void solve() {
         visited[i] = false;
     q.push(root);
     visited[root] = true;
+    pred[root] = -1;
     q.push(-1);
     while (q.size() > 1)
     {
@@ -55,12 +56,13 @@ void solve() {
         q.pop();
         if (node == -1)
         {depth++;q.push(-1);continue;}
-        pred[node] = prev;
+        //pred[node] = prev;
         prev = node;
         for (auto it = G[node].begin(); it != G[node].end(); it++)
             if (!visited[*it])
             {
                 visited[*it] = true;
+                pred[*it] = node;
                 q.push(*it);
             }
     }
@@ -71,19 +73,25 @@ void solve() {
     int end = prev;
 
     std::vector<int> dist(n, 0);
+
     dist[start] = depth;
     dist[end] = depth;
     int node = pred[end];
     int d = depth;
     int pm = -1;
 
-    while (node)
+    while (node >= 0)
     {
         d += pm;
+        if (d == depth / 2)
+        {
+            pm = 1;
+            d += depth % 2;
+        }
         dist[node] = d;
         node = pred[node];
-        if (d == depth / 2)
-            pm = -1;
+
+
     }
     for (int i = 0; i < n; i++)
         visited[i] = false;
@@ -96,7 +104,8 @@ void solve() {
         q.pop();
 
         if (dist[node] == 0)
-            dist[node] = dist[pred[node]] - 1;
+            dist[node] = dist[pred[node]] + 1;
+
 
         for (auto it = G[node].begin(); it != G[node].end(); it++)
             if (!visited[*it])

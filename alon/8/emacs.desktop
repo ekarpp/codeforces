@@ -2,19 +2,19 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri May 15 13:55:31 2020
+;; Created Fri May 15 15:39:38 2020
 ;; Desktop file format version 208
 ;; Emacs version 26.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (24254 29987 792810 693000) (desktop . "208") "qqqqq@ppppp" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "wheat") (background-color . "black") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "thistle") (sticky) (environment) (frameset--id . "AF82-0C34-28A6-59C4") (frameset--mini t . t) (frameset--text-pixel-width . 1564) (frameset--text-pixel-height . 861) (height . 47) (width . 173) (modeline . t) (unsplittable) (left . 0) (top . 37) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 9) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 90) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 81) (min-pixel-height-safe . 18) (min-pixel-width-safe . 18)) leaf (pixel-width . 1596) (pixel-height . 843) (total-width . 177) (total-height . 46) (normal-height . 1.0) (normal-width . 1.0) (buffer "c.cpp" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 5) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 266) (start . 39))))])
+(setq desktop-saved-frameset [frameset 1 (24254 36234 896207 976000) (desktop . "208") "qqqqq@ppppp" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "wheat") (background-color . "black") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "thistle") (sticky) (environment) (frameset--id . "64F3-AC7D-B74B-5D99") (frameset--mini t . t) (frameset--text-pixel-width . 1564) (frameset--text-pixel-height . 861) (height . 47) (width . 173) (modeline . t) (unsplittable) (left . 0) (top . 37) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 18) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 72) (min-pixel-width . 180) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 162) (min-pixel-height-safe . 18) (min-pixel-width-safe . 36)) hc (pixel-width . 1596) (pixel-height . 843) (total-width . 177) (total-height . 46) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 795) (pixel-height . 843) (total-width . 88) (total-height . 46) (normal-height . 1.0) (normal-width . 0.5) (buffer "c.cpp" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 5) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1600) (start . 1277))) (leaf (last . t) (pixel-width . 801) (pixel-height . 843) (total-width . 89) (total-height . 46) (normal-height . 1.0) (normal-width . 0.5) (buffer "c.cpp" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 5) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("/home/qqqqq/codeforce/alon/8/"))
+(setq file-name-history '("/home/qqqqq/codeforce/alon/8/" "/home/qqqqq/codeforce/alon/8/c.cpp"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 208
@@ -22,22 +22,10 @@
   "c.cpp"
   'c++-mode
   '(abbrev-mode global-auto-revert-mode override-global-mode linum-mode ivy-mode)
-  266
-  '(1 nil)
+  1
+  '(1757 nil)
   nil
   nil
-  '((buffer-display-time 24254 29984 430842 865000) (buffer-file-coding-system . undecided-unix))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  nil
-  "8"
-  'dired-mode
-  '(global-auto-revert-mode override-global-mode linum-mode ivy-mode)
-  498
-  '(nil nil)
-  t
-  '("/home/qqqqq/codeforce/alon/8/")
-  '((buffer-display-time 24254 29916 606022 998000))
-  '((mark-ring nil)))
+  '((buffer-display-time 24254 36232 474049 341000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (1905 1757 1905 1752 1739 2369 1727 2369 1912 1711 1523 1253 1509 1048 1522 1593))))
 
