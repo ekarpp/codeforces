@@ -1,6 +1,6 @@
-CCFLAGS := -static -DONLINE_JUDGE -lm -s -x c++ -O2 -std=c++11 -D__USE_MINGW_ANSI_STDIO=0
+CCFLAGS := -static -DONLINE_JUDGE -lm -s -x c++ -O2 -std=c++11 -D__USE_MINGW_ANSI_STDIO=0 -g
 
-all: A B C D E
+all: A B C D E F
 
 
 
