@@ -5,25 +5,149 @@
 //using namespace std;
 typedef long long ll;
 
+const int p = 49;
+
+#define N 100002
+
+#define M 9223372036854775807LL
+
+ll pp[N];
+ll hsh[N];
+ll roll[N];
+int occ[26];
+
 void solve() {
-    int n;
-    std::cin >> n;
-    std::vector<ll> vec(n);
+    std::string s;
+    std::cin >> s;
+    int k;
+    std::cin >> k;
 
-    for (int i = 0; i < n; i++)
-        std::cin >> vec[i];
+    std::vector<std::string> ptrns(k);
 
-    for (int i = 0; i < n; i++)
-        std::cout << vec[i];
+    for (int i = 0; i < k; i++)
+        std::cin >> ptrns[i];
+
+
+
+    int len = s.size();
+
+    std::vector<std::pair<int,int>> pairs(len);
+    std::vector<int> rank(len);
+    std::vector<int> unrank(len);
+
+    for (int i = 0; i < len; i++)
+    {
+        pairs[i].first = s[i];
+        pairs[i].second = s[i];
+        rank[i] = i;
+    }
+
+
+
+    for (int i = 0; len >> i; i++)
+    {
+        sort(rank.begin(), rank.end(),
+             [&](const int& a, const int & b)
+             {
+                 if (pairs[a].first == pairs[b].first)
+                     return pairs[a].second < pairs[b].second;
+                 else
+                     return pairs[a].first < pairs[b].first;
+             }
+            );
+
+
+        int ii = -1;
+        int min = -1;
+        for (int j = 0; j < len; j++)
+        {
+            int k = rank[j];
+            if (j == 0 || pairs[ii] < pairs[k])
+                min = j;
+            unrank[k] = min;
+            ii = k;
+        }
+
+        int siz = 1 << i;
+        for (int j = 0; j < len; j++)
+        {
+            pairs[j].first = unrank[j];
+            if (j + siz < len)
+                pairs[j].second = unrank[j + siz];
+            else
+                pairs[j].second = -1;
+        }
+    }
+
+    sort(rank.begin(), rank.end(),
+         [&](const int& a, const int & b)
+         {
+             if (pairs[a].first == pairs[b].first)
+                 return pairs[a].second < pairs[b].second;
+             else
+                 return pairs[a].first < pairs[b].first;
+         }
+        );
+
+
+    for (int i = 0; i < k; i++)
+    {
+        std::string ptrn = ptrns[i];
+        int l = 0;
+        int r = s.size() - 1;
+
+        while (l <= r)
+        {
+            int mid = (l + r) / 2;
+            int r = rank[mid];
+            if (s.compare(r, s.size(), ptrn) >= 0)
+            {
+                r = mid - 1;
+            }
+            else
+            {
+                if (s.compare(rank[mid + 1], s.size(), ptrn) == 0)
+                {l = r = mid + 1; break;}
+                l = mid + 1;
+            }
+
+        }
+
+        int start = (l + r) / 2;
+
+        std::cout << "l: " << l << " r: " << r;
+
+        l = start;
+        r = s.size() - 1;
+
+        while (l <= r)
+        {
+            int mid = (l + r) / 2;
+            int r = rank[mid];
+            int j = 0;
+            while (j < ptrn.size() && s[mid + j] == ptrn[j])
+                j++;
+            if (s.compare(r, s.size(), ptrn) <= 0)
+                l = mid + 1;
+            else
+                r = mid - 1;
+        }
+
+        int end = (l + 2) / 2;
+
+        std::cout << " end: " << end << " ";
+        std::cout << std::max(0, end - start) << "\n";
+    }
 }
+
 
 
 int main() {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(0);
 
-    int t;
-    std::cin >> t;
+    int t = 1;
+
     while (t--)
         solve();
 
