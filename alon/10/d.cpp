@@ -9,8 +9,6 @@ const int p = 49;
 
 #define N 100002
 
-#define M 9223372036854775807LL
-
 ll pp[N];
 ll hsh[N];
 ll roll[N];
@@ -24,88 +22,123 @@ void solve() {
 
     std::vector<std::string> ptrns(k);
 
-    int len = 0;
-
-    int i;
-
-    for (i = 0; i < k; i++)
-    {
+    for (int i = 0; i < k; i++)
         std::cin >> ptrns[i];
-        len = std::max(len, (int) ptrns[i].size());
-    }
 
-    for (i = 0; i < 26; i++)
-        occ[i] = -1;
 
-    pp[0] = p;
-    hsh[0] = pp[0] * s[0];
-    roll[0] = hsh[0];
-    occ[s[0] % 'a'] = 0;
 
-    for (i = 1; i < len; i++)
+    int len = s.size();
+
+    std::vector<std::pair<int,int>> pairs(len);
+    std::vector<int> rank(len);
+    std::vector<int> unrank(len);
+
+    for (int i = 0; i < len; i++)
     {
-        pp[i] = p * pp[i - 1];
-        hsh[i] = pp[i] * s[i];
-        roll[i] = roll[i - 1] + hsh[i];
-        if (occ[s[i] % 'a'] == -1)
-            occ[s[i] % 'a'] = i;
+        pairs[i].first = s[i];
+        pairs[i].second = s[i];
+        rank[i] = i;
     }
 
 
-    for ( ; i < s.size(); i++)
+
+    for (int i = 0; len >> i; i++)
     {
-        pp[i] = p * pp[i - 1];
-        hsh[i] = pp[i] * s[i];
-        roll[i] = roll[i - 1] + hsh[i];
-        if (occ[s[i] % 'a'] == -1)
-            occ[s[i] % 'a'] = i;
+        sort(rank.begin(), rank.end(),
+             [&](const int& a, const int & b)
+             {
+                 if (pairs[a].first == pairs[b].first)
+                     return pairs[a].second < pairs[b].second;
+                 else
+                     return pairs[a].first < pairs[b].first;
+             }
+            );
+
+
+        int ii = -1;
+        int min = -1;
+        for (int j = 0; j < len; j++)
+        {
+            int k = rank[j];
+            if (j == 0 || pairs[ii] < pairs[k])
+                min = j;
+            unrank[k] = min;
+            ii = k;
+        }
+
+        int siz = 1 << i;
+        for (int j = 0; j < len; j++)
+        {
+            pairs[j].first = unrank[j];
+            if (j + siz < len)
+                pairs[j].second = unrank[j + siz];
+            else
+                pairs[j].second = -1;
+        }
     }
 
-    for (i = 0; i < k; i++)
-    {
+    sort(rank.begin(), rank.end(),
+         [&](const int& a, const int & b)
+         {
+             if (pairs[a].first == pairs[b].first)
+                 return pairs[a].second < pairs[b].second;
+             else
+                 return pairs[a].first < pairs[b].first;
+         }
+        );
 
+
+    for (int i = 0; i < k; i++)
+    {
         std::string ptrn = ptrns[i];
+        int l = 0;
+        int r = s.size() - 1;
 
-
-        ll hsh_pt = 0;
-        int idx = occ[ptrn[0] % 'a'];
-        int j = idx;
-
-        if (j == -1)
+        while (l <= r)
         {
-            std::cout << -1 << "\n";
-            continue;
-        }
-        for ( ; j < ptrn.size() + idx; j++)
-            hsh_pt += pp[j] * ptrn[j - idx];
+            int mid = (l + r) / 2;
+            int rnk = rank[mid];
 
-        ll hsh_s;
-        if (idx)
-            hsh_s = roll[ptrn.size() + idx - 1] - roll[idx - 1];
-        else
-            hsh_s = roll[ptrn.size() - 1];
-
-        if (hsh_pt == hsh_s)
-        {
-            std::cout << 1 + idx << "\n";
-            continue;
-        }
-
-        for (; j < s.size(); j++)
-        {
-            hsh_pt *= p;
-            hsh_s += hsh[j];
-            hsh_s -= hsh[j - ptrn.size()];
-
-            if (hsh_s == hsh_pt)
+            if (s.compare(rnk, ptrn.size(), ptrn) >= 0)
             {
-                std::cout << j - ptrn.size() + 2 << "\n";
-                break;
+                r = mid - 1;
             }
+            else
+            {
+                l = mid + 1;
+            }
+
         }
 
-        if (j == s.size())
-            std::cout << -1 << "\n";
+        int start = r;//(l + r) / 2;
+
+
+        l = start;
+        r = s.size() - 1;
+
+        while (l <= r)
+        {
+            int mid = (l + r) / 2;
+            int rnk = rank[mid];
+            int j = 0;
+            while (j < ptrn.size() && s[mid + j] == ptrn[j])
+                j++;
+            if (s.compare(rnk, ptrn.size(), ptrn) <= 0)
+                l = mid + 1;
+            else
+                r = mid - 1;
+        }
+
+        int end = l;//(l + r) / 2;
+
+        int min;
+
+        if (start != end && start < s.size() - 1)
+            min = rank[start+1] + 1;
+        else
+            min = -1;
+
+        std::cout << min << "\n";
     }
 }
 

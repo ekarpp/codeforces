@@ -99,23 +99,21 @@ void solve() {
         while (l <= r)
         {
             int mid = (l + r) / 2;
-            int r = rank[mid];
-            if (s.compare(r, s.size(), ptrn) >= 0)
+            int rnk = rank[mid];
+
+            if (s.compare(rnk, ptrn.size(), ptrn) >= 0)
             {
                 r = mid - 1;
             }
             else
             {
-                if (s.compare(rank[mid + 1], s.size(), ptrn) == 0)
-                {l = r = mid + 1; break;}
                 l = mid + 1;
             }
 
         }
 
-        int start = (l + r) / 2;
+        int start = r;//(l + r) / 2;
 
-        std::cout << "l: " << l << " r: " << r;
 
         l = start;
         r = s.size() - 1;
@@ -123,20 +121,19 @@ void solve() {
         while (l <= r)
         {
             int mid = (l + r) / 2;
-            int r = rank[mid];
+            int rnk = rank[mid];
             int j = 0;
             while (j < ptrn.size() && s[mid + j] == ptrn[j])
                 j++;
-            if (s.compare(r, s.size(), ptrn) <= 0)
+            if (s.compare(rnk, ptrn.size(), ptrn) <= 0)
                 l = mid + 1;
             else
                 r = mid - 1;
         }
 
-        int end = (l + 2) / 2;
+        int end = l;//(l + r) / 2;
 
-        std::cout << " end: " << end << " ";
-        std::cout << std::max(0, end - start) << "\n";
+        std::cout << std::max(0, end - start - 1) << "\n";
     }
 }
 
