@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -static -DONLINE_JUDGE -s -x c++ -O2 -std=c++11 -D__USE_MINGW_ANSI_STDIO=0 -g
+CXXFLAGS := -static -DONLINE_JUDGE -s -x c++ -O2 -std=c++17 -D__USE_MINGW_ANSI_STDIO=0
 LDFLAGS := -lm
 
 SOURCES=$(wildcard *.cc)
