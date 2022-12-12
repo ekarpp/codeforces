@@ -1,19 +1,17 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 //using namespace std;
 typedef long long ll;
 
 void solve() {
-    int n;
+    ll n;
     std::cin >> n;
     std::vector<ll> vec(n);
 
-    for (int i = 0; i < n; i++)
+    for (ll i = 0; i < n; i++)
         std::cin >> vec[i];
 
-    for (int i = 0; i < n; i++)
+    for (ll i = 0; i < n; i++)
         std::cout << vec[i];
 }
 
@@ -22,7 +20,7 @@ int main(int argc, char **argv) {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(0);
 
-    int t;
+    ll t;
     std::cin >> t;
     while (t--)
         solve();
