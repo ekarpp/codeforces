@@ -7,6 +7,7 @@ EXECS=$(SOURCES:%.cc=%)
 
 .PHONY: all
 all: $(EXECS)
+	@echo $(EXECS)
 
 .cc:
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $< -o $@
