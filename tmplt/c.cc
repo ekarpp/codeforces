@@ -3,25 +3,30 @@
 using namespace std;
 typedef long long ll;
 
-void solve() {
+void yes() { cout << "YES" << endl; }
+void no() { cout << "NO" << endl; }
+
+void solve()
+{
     ll n;
-    std::cin >> n;
-    std::vector<ll> vec(n);
+    cin >> n;
+    vector<ll> vec(n);
 
     for (ll i = 0; i < n; i++)
-        std::cin >> vec[i];
+        cin >> vec[i];
 
     for (ll i = 0; i < n; i++)
-        std::cout << vec[i];
+        cout << vec[i];
 }
 
 
-int main(int argc, char **argv) {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(0);
+int main(int argc, char **argv)
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
 
     ll t;
-    std::cin >> t;
+    cin >> t;
     while (t--)
         solve();
 
